@@ -28,8 +28,8 @@ In either your Windows Command Line or MacOS Terminal type in the following comm
 
 ## Step Three - Setup AWS CLI & Credential Settings
 
-Ensure that you already have an AWS account setup. If you need to setup an AWS account go to this link[https://portal.aws.amazon.com/billing/signup#/start]
+Ensure that you already have an AWS account setup. If you need to setup an AWS account go to this [link](https://portal.aws.amazon.com/billing/signup#/start)
 
-For detailed instruction on installing AWS CLI go to this page[https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html] and select your Operating System that you are currently using. The next page will have indepth installating information.
+For detailed instruction on installing AWS CLI go to this [page](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) and select your Operating System that you are currently using. The next page will have indepth installating information.
 
-After CLI is downloaded create a new user through the IAM portal and follow these instructions.[https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console]
+After CLI is downloaded create a new user through the IAM portal and follow these [instructions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console)
