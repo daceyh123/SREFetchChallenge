@@ -11,5 +11,19 @@
  1. Hit the windows button on your keyboard and type in "cmd" and hit enter.
  2. Type in "python" and you should see something similar to this output: Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 19:29:22) [MSC v.1916 32 bit (Intel)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
- 3. If this is the ouput that you get then type in "exit()"
- 
+ 3. If this is the ouput that you get then type in "exit()" to exit python.
+
+### MacOS
+
+ 1. Press Command + spacebar to open spotlight search and type in "Terminal" and select Terminal.
+ 2. type in "python" into the terminal and hit enter. You should see similar output to the windows example.
+ 3. If this is the ouput that you get then type in "exit()" to exit python.
+
+## Step Two - Pip Install all dependencies
+
+In either your Windows Command Line or MacOS Terminal type in the following commands:
+ 1. pip install boto3
+ 2. pip install pyyaml
+ 3. pip install paramiko
+
+## Step Three - Setup AWS CLI
