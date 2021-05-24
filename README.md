@@ -33,3 +33,11 @@ Ensure that you already have an AWS account setup. If you need to setup an AWS a
 For detailed instruction on installing AWS CLI go to this [page](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) and select your Operating System that you are currently using. The next page will have indepth installating information.
 
 After CLI is downloaded create a new user through the IAM portal and follow these [instructions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console)
+
+After you create a user and gather the Access Key ID and the Secret Access Key, go to your terminal and type in "aws configure". This will prompt for 4 inputs (one at a time):
+AWS Access Key ID [None]: --YOUR ACCESS KEY ID--
+AWS Secret Access Key [None]: --YOUR SECRET ACCESS KEY--
+Default region name [None]: [Choose your region code](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
+Default output format [None]: json
+
+After this is set then your CLI environment should be successfully setup.
