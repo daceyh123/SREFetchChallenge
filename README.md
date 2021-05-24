@@ -19,14 +19,14 @@ Type "help", "copyright", "credits" or "license" for more information.
  2. type in "python" into the terminal and hit enter. You should see similar output to the windows example.
  3. If this is the ouput that you get then type in "exit()" to exit python.
 
-## Step Two - Pip Install all dependencies
+## Step Two - Pip Install all dependencies (Skip if this is already done)
 
 In either your Windows Command Line or MacOS Terminal type in the following commands:
  1. pip install boto3
  2. pip install pyyaml
  3. pip install paramiko
 
-## Step Three - Setup AWS CLI & Credential Settings
+## Step Three - Setup AWS CLI & Credential Settings (Skip if this is already done)
 
 Ensure that you already have an AWS account setup. If you need to setup an AWS account go to this [link](https://portal.aws.amazon.com/billing/signup#/start)
 
@@ -41,3 +41,6 @@ After you create a user and gather the Access Key ID and the Secret Access Key, 
  4. Default output format [None]: json
 
 After this is set then your CLI environment should be successfully setup.
+
+## Step Four - Download the project
+
