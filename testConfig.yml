@@ -1,0 +1,22 @@
+server:
+  ami_type: ami-077e31c4939f6a2f3
+  architecture: x86_64
+  instance_type: t2.micro
+  max_count: 1
+  min_count: 1
+  root_device_type: ebs
+  users:
+  - login: user1
+    ssh_key: --user1 public key--
+  - login: user2
+    ssh_key: --user2 public key--
+  virtualization_type: hvm
+  volumes:
+  - device: /dev/xvda
+    mount: /
+    size_gb: 10
+    type: xfs
+  - device: /dev/xvdf
+    mount: /data
+    size_gb: 100
+    type: ext4
