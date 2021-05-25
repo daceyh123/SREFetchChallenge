@@ -55,6 +55,28 @@ Click where the arrow is and this will show the file path of the project.
 Copy this path and go to your command prompt window and enter in CD *path* like below:
 ![image](https://user-images.githubusercontent.com/36930977/119421011-b706ef00-bccb-11eb-9041-5b2255b86e20.png)
 
-After you can run python main.py to run the command and if everything is setup then it should create your own EC2 instance!
+After you can run python main.py to run the command and if everything is setup then it should create your own EC2 instance! The output will also contain the address. Be sure to copy this down as it will be important later.
 
+## Step Five - SSH into Linux EC2 Instance
+
+Now that we have the ec2 instance spun up we can now SSH into the machine. 
+
+### Windows
+I Recommend downloading [Termius](https://termius.com/) to connect via ssh. After you download termius and select the basic plan, click "New Host" and here are the fields you will need to fill out:
+ 1. Label: Anything you want to name it.
+ 2. Address: the address that was outputted at the end of the script that I told you to keep copied somewhere in the instructions above.
+ 3. Make sure SSH is turned on (its a switch)
+ 4. Keep Port 22 as default
+ 5. Username: user1 or user2 (this can be edited in the YAML to be a different name)
+ 6. Password: click Keys and click "+Key" in the bottom right hand corner
+   6a. Label: can be whatever you want
+   6b. Private Key: click "File"
+   6c. Select a "user#-keypair" based on whatever user you are trying to sign in as
+   6d. Click save
+ 7. Click the key you just created
+ 8. Click save in the top right corner
+ 9. Double click on the host server you just created
+ 10. If prompted to add and continue, click add and continue
+ 11. After this you should be SSHd into the EC2 instance!
+   
 
