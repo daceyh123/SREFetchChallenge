@@ -44,3 +44,17 @@ After this is set then your CLI environment should be successfully setup.
 
 ## Step Four - Download the project
 
+Go to the front page of the [project](https://github.com/daceyh123/SREFetchChallenge) and click the "Code" button in the top right hand corner and click "Download ZIP" from the drop down. At this point a zip file will be downloaded and the file needs to be extracted. If you need any help extracting the folder please follow this [guide](https://www.softwaretestinghelp.com/how-to-open-a-zip-file/)
+
+After the project is in an unzipped folder, we need to go to the directory via the Command Line for Windows or the Terminal for MacOS. Below is the easiest ways to get to the directory.
+
+### Windows
+![image](https://user-images.githubusercontent.com/36930977/119420588-d4878900-bcca-11eb-96ba-981e36fa1569.png)
+Click where the arrow is and this will show the file path of the project.
+![image](https://user-images.githubusercontent.com/36930977/119420692-13b5da00-bccb-11eb-9948-82391d6843ab.png)
+Copy this path and go to your command prompt window and enter in CD *path* like below:
+![image](https://user-images.githubusercontent.com/36930977/119421011-b706ef00-bccb-11eb-9041-5b2255b86e20.png)
+
+After you can run python main.py to run the command and if everything is setup then it should create your own EC2 instance!
+
+
