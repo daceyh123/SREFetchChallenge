@@ -64,7 +64,7 @@ Copy the "Where" section
 ![image](https://user-images.githubusercontent.com/36930977/119425931-444f4100-bcd6-11eb-9917-88fba34b53d4.png)
 type "cd " into the terminal and paste the path
 
-After you can type "python main.py" to run the command and if everything is setup then it should create your own EC2 instance! The output will also contain the address. Be sure to copy this down as it will be important later.
+After you can type "python main.py" to run the command and if everything is setup then it should create your own EC2 instance! The output will also contain the address. Be sure to copy this down as it will be important later. MacOS users might need to run "python3 main.py"depending on their current configuration. If it is saying that it cannot find modules please try running the pip install commands, but use "pip3" instead of "pip".
 
 MacOS users if it says that the dependency cannot be found, try performing "pip3 install [package]" for each of the dependencies.
 
