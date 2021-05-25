@@ -2,6 +2,7 @@ import time
 import paramiko
 import boto3
 import yaml
+from botocore.exceptions import ClientError
 # Script that runs on startup to create the users, sets up RSA key, and moves the information to authorized_keys
 script = '''#!/bin/sh
 sudo mkfs.{0} {1}
@@ -45,6 +46,37 @@ print("Generated EC2 Key Pair.\n")
 # Creates ec2 instance based on yaml file inputs
 print("Creating EC2 Instance...")
 client = boto3.client('ec2', region_name='us-east-2')
+
+#creates a new security group
+secGroupID = ""
+response = client.describe_vpcs()
+vpc_id = response.get('Vpcs', [{}])[0].get('VpcId', '')
+
+try:
+    response = client.create_security_group(GroupName='testGroup',
+                                         Description='DESCRIPTION',
+                                         VpcId=vpc_id)
+    security_group_id = response['GroupId']
+    secGroupID = response['GroupId']
+    print('Security Group Created %s in vpc %s.' % (security_group_id, vpc_id))
+
+    data = client.authorize_security_group_ingress(
+        GroupId=security_group_id,
+        IpPermissions=[
+            {'IpProtocol': 'tcp',
+             'FromPort': 80,
+             'ToPort': 80,
+             'IpRanges': [{'CidrIp': '0.0.0.0/0'}]},
+            {'IpProtocol': 'tcp',
+             'FromPort': 22,
+             'ToPort': 22,
+             'IpRanges': [{'CidrIp': '0.0.0.0/0'}]}
+        ])
+    print('Ingress Successfully Set %s' % data)
+except ClientError as e:
+    print(e)
+
+# Creates the Instance
 response = client.run_instances(
     BlockDeviceMappings=[
         {
@@ -74,7 +106,8 @@ response = client.run_instances(
         'Enabled': False
     },
     # sends script above to ec2 instance to run on startup, creating the users.
-    UserData=script
+    UserData=script,
+    SecurityGroupIds= [secGroupID]
 )
 print("EC2 Instance created. Sleeping for 100 seconds so instance can initialize. DO NOT EXIT...\n")
 time.sleep(100)
