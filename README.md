@@ -55,7 +55,18 @@ Click where the arrow is and this will show the file path of the project.
 Copy this path and go to your command prompt window and enter in CD *path* like below:
 ![image](https://user-images.githubusercontent.com/36930977/119421011-b706ef00-bccb-11eb-9041-5b2255b86e20.png)
 
-After you can run python main.py to run the command and if everything is setup then it should create your own EC2 instance! The output will also contain the address. Be sure to copy this down as it will be important later.
+### MacOS
+
+![image](https://user-images.githubusercontent.com/36930977/119425755-f0dcf300-bcd5-11eb-834c-85a18ee4a8c9.png)
+Click get Info to get more information
+![image](https://user-images.githubusercontent.com/36930977/119425836-1bc74700-bcd6-11eb-8391-e66c4fd2074e.png)
+Copy the "Where" section
+![image](https://user-images.githubusercontent.com/36930977/119425931-444f4100-bcd6-11eb-9917-88fba34b53d4.png)
+type "cd " into the terminal and paste the path
+
+After you can type "python main.py" to run the command and if everything is setup then it should create your own EC2 instance! The output will also contain the address. Be sure to copy this down as it will be important later.
+
+MacOS users if it says that the dependency cannot be found, try performing "pip3 install [package]" for each of the dependencies.
 
 ## Step Five - SSH into Linux EC2 Instance
 
@@ -78,5 +89,11 @@ I Recommend downloading [Termius](https://termius.com/) to connect via ssh. Afte
  9. Double click on the host server you just created
  10. If prompted to add and continue, click add and continue
  11. After this you should be SSHd into the EC2 instance!
-   
+
+### MacOS
+You can SSH directly from your MacOS environment via the terminal.
+ 1. You need to be in the directory of the project to reference the pem keys without using the whole directory.
+ 2. run a command similar to this: ssh -i user#-keypair.pem user#@outputfromscriptfortheaddress
+ 3. Here is an example: ssh -i user1-keypair.pem user1@ec2-18-189-16-92.us-east-2.compute.amazonaws.com
+ 4. If it gives you an error about the key not being secure type the command "chmod 400 user#-keypair.pem". This should fix the issue.
 
